@@ -18,13 +18,16 @@ public class InMemoryFlightRepository implements FlightRepository {
 
 			flights.put(1, new Flight(1, "AA123", "New York", "London", 500.0, 100, 50));
 			flights.put(2, new Flight(2, "BA456", "London", "New York", 600.0, 100, 30));
+
+			System.out.println(flights.get(1));
 	    }
 
 	    @Override
 	    public List<Flight> searchFlights(String origin, String destination) {
 	        List<Flight> result = new ArrayList<>();
 	        for(Flight flight : flights.values()){
-				if(flight.getOrigin().equalsIgnoreCase(origin)&&flight.getDestination().equalsIgnoreCase(destination)){
+				if(flight.getOrigin() != null && flight.getOrigin().equalsIgnoreCase(origin)&&
+						flight.getDestination() != null && flight.getDestination().equalsIgnoreCase(destination)){
 					result.add(flight);
 				}
 			}

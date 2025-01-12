@@ -15,6 +15,13 @@ public class Flight {
 
 	    public Flight(int id, String flightNumber, String origin, String destination, double price, int capacity, int availableSeats) {
 	    	// your code goes here
+			this.id = id;
+			this.flightNumber = flightNumber;
+			this.origin = origin;
+			this.destination = destination;
+			this.price = price;
+			this.capacity = capacity;
+			this.availableSeats = availableSeats;
 	    }
 
 	    // Getters and Setters
