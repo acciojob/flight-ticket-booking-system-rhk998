@@ -18,25 +18,21 @@ public class FlightBookingController {
 	   private final FlightBookingService flightBookingService;
 
 	    public FlightBookingController(FlightBookingService flightBookingService) {
-	    	// your code goes here
 	        this.flightBookingService = flightBookingService;
 	    }
 
 	    @GetMapping
 	    public List<Flight> searchFlights(@RequestParam String origin, @RequestParam String destination) {
-	    	// your code goes here
 	        return flightBookingService.searchFlights(origin, destination);
 	    }
 
 	    @GetMapping("/{id}")
 	    public Flight getFlightById(@PathVariable int id) {
-	    	// your code goes here
 	        return flightBookingService.getFlightById(id);
 	    }
 
 	    @PostMapping("/book")
 	    public ResponseEntity<String> bookFlight(@RequestBody FlightBooking booking) {
-	    	// your code goes here
 	        return ResponseEntity.ok("Booking successful");
 	    }
 }

@@ -19,10 +19,4 @@ public class FlightTicketBookingSystemSolutionApplication {
 	    public FlightBookingService flightBookingService(FlightRepository flightRepository) {
 	        return new FlightBookingServiceImpl(flightRepository);
 	    }
-
-	    @Bean
-	    public FlightBookingController flightBookingController(FlightBookingService flightBookingService) {
-	        return new FlightBookingController(flightBookingService);
-	    }
-
 }
